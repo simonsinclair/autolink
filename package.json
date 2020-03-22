@@ -1,0 +1,29 @@
+{
+  "name": "autolink",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Chrome extension that automatically converts text matching user-defined patterns into links.",
+  "main": "src/background.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simonsinclair/autolink.git"
+  },
+  "keywords": [
+    "chrome-extension"
+  ],
+  "author": "Simon Sinclair",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/simonsinclair/autolink/issues"
+  },
+  "homepage": "https://github.com/simonsinclair/autolink#readme"
+}
