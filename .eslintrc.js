@@ -1,7 +1,5 @@
 module.exports = {
-  extends: [
-    'airbnb-base',
-  ],
+  extends: ['airbnb-base', 'plugin:prettier/recommended'],
   env: {
     browser: true,
     // "Enable all ECMAScript 6 features except for modules (this
