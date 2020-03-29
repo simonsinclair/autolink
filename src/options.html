@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Autolink</title>
+    <style>
+      html {
+        box-sizing: border-box;
+        font-size: 18px;
+        line-height: 27px;
+      }
+
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+
+      body {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        margin: 3rem;
+      }
+
+      button {
+        background: none;
+        cursor: pointer;
+        font-size: 1rem;
+        line-height: 1;
+        padding: 0.5rem;
+        white-space: nowrap;
+      }
+
+      .container {
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 3rem;
+        max-width: 960px;
+      }
+
+      .add__row {
+        margin-bottom: 1.5rem;
+      }
+
+      .add__label,
+      .add__label + small {
+        display: block;
+      }
+
+      .add__field {
+        font-size: 1rem;
+        line-height: 1;
+        padding: 0.5rem;
+        width: 100%;
+      }
+
+      .rules {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .rules > li {
+        align-items: center;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Add Autolink</h2>
+      <form id="js-add" class="add">
+        <div class="add__row">
+          <label class="add__label" for="origin">On:</label>
+          <input
+            class="add__field"
+            id="origin"
+            type="text"
+            required=""
+            name="origin"
+            placeholder="https://www.example.com"
+          />
+        </div>
+        <div class="add__row">
+          <label class="add__label" for="regexp">Match:</label>
+          <input
+            class="add__field"
+            id="regexp"
+            type="text"
+            required=""
+            name="regexp"
+            placeholder="ISSUE-(.*)"
+          />
+          <small>A Regular Expression.</small>
+        </div>
+        <div class="add__row">
+          <label class="add__label" for="target">Link to:</label>
+          <input
+            class="add__field"
+            id="target"
+            type="text"
+            required=""
+            name="target"
+            placeholder="https://www.example.com/browse/ISSUE-{1}"
+          />
+          <small
+            >{1}, {2}, etc will be replaced with the value of each group
+            match.</small
+          >
+        </div>
+        <button type="submit">Add &plus;</button>
+      </form>
+    </div>
+    <div class="container">
+      <h2>Autolink rules</h2>
+      <ul id="js-rules" class="rules"></ul>
+    </div>
+  </body>
+  <script src="options.js"></script>
+</html>
